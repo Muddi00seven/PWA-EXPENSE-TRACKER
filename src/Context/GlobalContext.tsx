@@ -31,7 +31,15 @@ export const TransactionProvider: React.FC = ({children}) =>{
 
     return(
         <div>
-    
+            <TransactionContext.Provider
+            value={{
+                Transaction: state.Transaction,
+                addTransaction,
+                deleteTransaction
+            }}
+            >
+                {children}
+            </TransactionContext.Provider>
          </div>
     )
 }
