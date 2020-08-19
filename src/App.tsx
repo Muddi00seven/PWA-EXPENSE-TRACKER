@@ -5,8 +5,8 @@ import {TransactionProvider} from './Context/GlobalContext'
 import Header from './Components/Header/Header'
 import Balance from './Components/TrackerComponents/Balance' 
 import IncomeExpense from './Components/TrackerComponents/IncomeExpense' 
-import Transaction from './Components/TrackerComponents/Transaction' 
-import  TransactionList from './Components/TrackerComponents/TransactionList';
+// import Transactions from './Components/TrackerComponents/Transaction' 
+import  TransactionalList from './Components/TrackerComponents/TransactionList';
 import AddTransaction from './Components/TrackerComponents/AddTransaction'
 function App() {
   return (
@@ -14,7 +14,8 @@ function App() {
     <div className="App">
       <Header/>
       <Balance/>
-      <TransactionList/>
+      <IncomeExpense/>
+      <TransactionalList/>
       <AddTransaction/>
     </div>
     </TransactionProvider>

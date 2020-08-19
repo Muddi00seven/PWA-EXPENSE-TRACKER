@@ -6,7 +6,7 @@ Transaction : {
 }[];
 deleteTransaction:(id : number) => void;
 addTransaction:(transaction : TransactionType ) => void;
-}
+};
 
 
 export type Actions =
@@ -20,15 +20,15 @@ export type TransactionType = {
     id: number,
     text : string,
     amount : number
-}
+};
 
 
 export type TransactionPropType = {
-  transact :
+    trans :
   {  id: number,
     text : string,
     amount : number}
-}
+};
 
 
 

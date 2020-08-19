@@ -1,7 +1,7 @@
 import React, {createContext , useReducer} from 'react'
 // import { createContext ,useucer } from 'vm';
 import {TransactionType , initialStateType} from '../Types/TransactionType';
-import Reducer from './Reducer';
+import TransactionReducer from './Reducer';
 
 const initialState : initialStateType = {
     Transaction : [{id: 1 , text : 'Amount' , amount : 455}],
@@ -12,7 +12,7 @@ const initialState : initialStateType = {
 export const TransactionContext = createContext(initialState);
 
 export const TransactionProvider: React.FC = ({children}) =>{
-    const [state, dispatch] = useReducer(Reducer ,initialState);
+    const [state, dispatch] = useReducer(TransactionReducer ,initialState);
 
 
     function deleteTransaction(id: number) {

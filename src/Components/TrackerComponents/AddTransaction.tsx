@@ -34,15 +34,14 @@ const AddTransaction = () => {
     };
   
     return (
-        <div className=" w-6/12 mx-auto mt-6 max-w-sm">
-        <h1 className="text-xl text-white">Add new transaction</h1>
-        <hr className="my-4" />
+        <div >
+        <h1>Add new transaction</h1>
+        <hr />
         <form onSubmit={OnSubmit}>
-          <div className="block mb-1">
-            <label className="text-lg text-gray-400 ">Text</label>
+          <div >
+            <label >Text</label>
             <div className="my-2">
               <input
-                className="w-full  rounded-sm py-1 px-2 outline-none"
                 placeholder="Enter Text..."
                 value={text}
                 onChange={(e) => {
@@ -60,11 +59,10 @@ const AddTransaction = () => {
               </h1> */}
             </div>
           </div>
-          <div className="block">
-            <label className="text-lg text-gray-400 ">Amount</label>
-            <div className="my-2">
+          <div>
+            <label >Amount</label>
+            <div >
               <input
-                className="w-full rounded-sm py-1 px-2 outline-none"
                 placeholder="Enter Amount..."
                 value={amount === 0 ? "" : amount}
                 onChange={(e) => {
@@ -85,7 +83,6 @@ const AddTransaction = () => {
           </div>
           <div className="block">
             <input
-              className={`my-3 px-6 py-2 bg-blue-600 text-white w-full rounded-md ouline:none cursor-pointer focus:outline-none `}
               type="Submit"
             />
           </div>
