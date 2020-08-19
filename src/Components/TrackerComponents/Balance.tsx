@@ -1,5 +1,5 @@
-import React , { useContext} from 'react'
-
+import React , { useContext} from 'react';
+import {TransactionContext} from '../../Context/GlobalContext';
 const Balance = () => {
     return (
         <div>

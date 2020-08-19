@@ -1,4 +1,4 @@
-import Transaction from '../Components/Transaction';
+import Transaction from '../Components/TrackerComponents/Transaction';
 import {TransactionType } from '../Types/TransactionType';
 
 type Actions = 
