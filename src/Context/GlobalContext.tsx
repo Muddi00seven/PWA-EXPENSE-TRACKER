@@ -1,12 +1,12 @@
 import React, {useContext , useReducer} from 'react'
+import { createContext } from 'vm';
 import {TransactionType , initialStateType} from '../Types/TransactionType';
+import Reducer from './Reducer';
 
-const GlobalContext = () => {
-    return (
-        <div>
-            
-        </div>
-    )   
-}
+const initialState : initialStateType = {
+    Transaction : [{id: 1 , text : 'Amount' , amount : 455}],
+    deleteTransaction : () => {},
+    addTransaction : () => {}
+};
 
-export default GlobalContext
+export const TransactionContext = createContext(initialState)

@@ -1,5 +1,5 @@
-import Transaction from '../Components/Transaction'
-import {TransactionType } from '../Types/TransactionType'
+import Transaction from '../Components/Transaction';
+import {TransactionType } from '../Types/TransactionType';
 
 type Actions = 
 | {type : 'Delete_Transaction' ; 
