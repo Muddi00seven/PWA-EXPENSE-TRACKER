@@ -1,11 +1,31 @@
-import React from 'react'
+import Transaction from '../Components/Transaction'
+import {TransactionType } from '../Types/TransactionType'
 
-const Reducer = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+type Actions = 
+| {type : 'Delete_Transaction' ; 
+    payload: number} 
+| {type : 'Add_Transaction' ;
+    payload : TransactionType}
+
+export default (state: {Transaction : TransactionType[]} , action : Actions) =>{
+    switch(action.type) {
+        case 'Delete_Transaction' :
+            return{
+                ...state,
+                Transaction : state.Transaction.filter(
+                    (transaction) => transaction.id != action.payload
+                ),
+            };
+
+        case 'Add_Transaction' :
+            return{
+                ...state,
+                Transaction : [action.payload, ...state.Transaction],
+            };
+        
+        default:
+            return state;
+        
+    }
 }
-
-export default Reducer
+    
