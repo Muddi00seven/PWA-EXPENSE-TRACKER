@@ -1,7 +1,8 @@
-import React , { useContext} from 'react'
+import React, { useContext } from "react";
 import {TransactionContext} from '../../Context/GlobalContext';
-import { TransactionType } from "../../Types/TransactionType";
-import TransactionDel from './Transaction';
+import TransactionDel from "./Transaction";
+// type
+import { TransactionType } from "./../../Types/TransactionType";
 
 const TransactionalList = () => {
   const { Transaction } = useContext(TransactionContext);
