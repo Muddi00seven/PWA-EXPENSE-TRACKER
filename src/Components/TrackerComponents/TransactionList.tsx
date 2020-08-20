@@ -7,13 +7,12 @@ const TransactionalList = () => {
   const { Transaction } = useContext(TransactionContext);
 
   return (
-    <div className=" w-6/12 mx-auto mt-6 max-w-sm">
-      <h1 className="text-xl text-white">History</h1>
-      <hr className="my-4" />
-
+    <div>
+        <h3>History</h3>
+      <ul className="list">
       {Transaction.map((trans: TransactionType) => (
         <TransactionDel trans={trans} key={trans.id} />
-      ))}
+      ))}      </ul>
     </div>
   );
 };

@@ -22,18 +22,18 @@ const IncomeExpense = () => {
   );
 
   return (
-    <div className="bg-gray-100 flex  w-6/12 mx-auto my-1 max-w-sm">
-      <div className="flex-1 p-4 bg-gray-100 border-solid border-r-2">
-        <h1 className="text-center sm:text-xl text-sm text-black">INCOME</h1>
-        <h1 className="text-center sm:text-2xl text-sm text-green-500">
-          {income}
-        </h1>
-      </div>
-      <div className="flex-1 p-4 bg-gray-100">
-        <h1 className="text-center sm:text-xl text-sm text-black">EXPENSE</h1>
-        <h1 className="text-center sm:text-2xl text-sm text-red-500">
-          {expense}
-        </h1>
+    <div>
+  
+
+      <div className="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+  <p className="money plus">{income}</p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+  <p className="money minus">{expense}</p>
+        </div>
       </div>
     </div>
   );

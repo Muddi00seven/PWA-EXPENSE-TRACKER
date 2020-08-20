@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div>
             <h1>
-                Expense Tracker
+                PWA Expense Tracker By Mudassir Khan
             </h1>
         </div>
     )

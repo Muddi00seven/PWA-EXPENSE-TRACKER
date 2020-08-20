@@ -26,46 +26,26 @@ if(amount === 0) {
   };
 
   return (
-    <div className=" w-6/12 mx-auto mt-6 max-w-sm">
-      <h1 className="text-xl text-white">Add new transaction</h1>
-      <hr className="my-4" />
+    <div>
+     
+      <h3>Add new transaction</h3>
       <form onSubmit={OnSubmit}>
-        <div className="block mb-1">
-          <label className="text-lg text-gray-400 ">Text</label>
-          <div className="my-2">
-            <input
-              className="w-full  rounded-sm py-1 px-2 outline-none"
-              placeholder="Enter Text..."
-              value={text}
+        <div className="form-control">
+          <label htmlFor="text">Transaction Belongs To</label>
+          <input type="text"   value={text}
               onChange={(e) => {
                 setText(String(e.target.value));
-              }}
-              type="text"
-            />
-         
-          </div>
+              }} placeholder="Details...." />
         </div>
-        <div className="block">
-          <label className="text-lg text-gray-400 ">Amount</label>
-          <div className="my-2">
-            <input
-              className="w-full rounded-sm py-1 px-2 outline-none"
-              placeholder="Enter Amount..."
-              value={amount === 0 ? "" : amount}
+        <div className="form-control">
+          <label htmlFor="amount">
+              Amount </label >
+          <input type="number"   value={amount === 0 ? "" : amount}
               onChange={(e) => {
                 setAmount(Number(e.target.value));
-              }}
-              type="number"
-            />
-      
-          </div>
+              }} placeholder="Enter amount..." />
         </div>
-        <div className="block">
-          <input
-            className={`my-3 px-6 py-2 bg-blue-600 text-white w-full rounded-md ouline:none cursor-pointer focus:outline-none `}
-            type="Submit"
-          />
-        </div>
+        <button className="btn">Submit Transaction</button>
       </form>
     </div>
   );
