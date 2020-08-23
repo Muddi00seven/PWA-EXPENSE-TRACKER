@@ -10,7 +10,7 @@ const AddTransaction = () => {
   const OnSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 if(amount === 0) {
-  alert('dsadsa')
+  alert('Fill All The Input Values')
 }
      else {
       const newTransAdd = {
