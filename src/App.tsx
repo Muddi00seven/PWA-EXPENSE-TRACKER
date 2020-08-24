@@ -7,7 +7,13 @@ import IncomeExpense from './Components/TrackerComponents/IncomeExpense'
 // import Transactions from './Components/TrackerComponents/Transaction' 
 import  TransactionalList from './Components/TrackerComponents/TransactionList';
 import AddTransaction from './Components/TrackerComponents/AddTransaction'
+import firebase from './Firebase'
 function App() {
+  const messaging = firebase.messaging();
+  messaging.requestPermission().then(() => {
+    return messaging.getToken()
+  }).catch((err) => (console.log('error' , err)))
+
   return (
     <TransactionProvider>
     <div className="App">
